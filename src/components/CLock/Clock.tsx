@@ -5,7 +5,7 @@ export function Clock(){
   
   function refreshClock() {
     setDate(new Date());
-    console.log('time set');
+    console.log('tik-tak');
   }
 
   useEffect(() => {
@@ -14,7 +14,6 @@ export function Clock(){
 
     return function cleanup() {
       console.log('clock unmounter');
-      
       clearInterval(timerId);
     };
   }, []);
