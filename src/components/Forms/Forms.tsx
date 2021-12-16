@@ -1,21 +1,25 @@
-import React, { ReactEventHandler, useState } from "react";
+import React, { useState } from "react";
 
 export const Forms: React.FC = () => {
 
   const [formInfo, setFormInfo] = useState({
     name: '',
     sirname: '',
-    age: 0,
+    age: '',
     adress: '',
     gender: '',
+    radio: '',
+    checkbox: true,
   })
 
   const handleChange = (event: any) => {
-    const value = event.target.value;
+    const value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
     setFormInfo({
       ...formInfo,
       [event.target.name]: value,
     })
+
+    console.log(formInfo)
   }
 
   return (
@@ -68,6 +72,42 @@ export const Forms: React.FC = () => {
           <option value="male"> Male </option>
           <option value="female"> Female </option>
         </select>
+
+        <label
+          htmlFor="radio1"
+        >
+          Radiobutton1
+        </label>
+        <input
+          type="radio"
+          name="radio"
+          value='Radiobutton1'
+          onChange={handleChange}
+        />
+
+        <label
+          htmlFor="radio2"
+        >
+          Radiobutton2
+        </label>
+        <input
+          type="radio"
+          name="radio"
+          value='Radiobutton2'
+          onChange={handleChange}
+        />
+
+        <label
+          htmlFor="checkbox"
+        >
+          Checkbox
+        </label>
+        <input
+          type="checkbox"
+          name="checkbox"
+          checked={formInfo.checkbox}
+          onChange={handleChange}
+        />
 
         <button
           type="submit"
