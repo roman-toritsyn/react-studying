@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Card } from './components/Card';
+import { WelcomeDialog } from './components/Children';
 import { Clock } from './components/CLock';
+import { Forms } from './components/Forms';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
 import { TextArea } from './components/TextArea';
@@ -30,6 +32,8 @@ function App() {
       <Card />
       <List />
       <TextArea />
+      <WelcomeDialog />
+      <Forms />
     </div>
   );
 }
