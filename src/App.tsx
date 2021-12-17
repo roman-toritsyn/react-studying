@@ -6,6 +6,7 @@ import { Clock } from './components/CLock';
 import { Forms } from './components/Forms';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
+import { SetState } from './components/SetState';
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -32,6 +33,7 @@ function App() {
       <List />
       <WelcomeDialog />
       <Forms />
+      <SetState />
     </div>
   );
 }
