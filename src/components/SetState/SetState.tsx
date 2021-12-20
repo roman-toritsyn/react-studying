@@ -1,17 +1,17 @@
 import { useState } from "react"
 
+let clickCount = 0;
+
 export const SetState: React.FC = () => {
   const [stateOne, setStateOne] = useState(0);
   const [stateTwo, setStateTwo] = useState(0);
   const [stateThree, setStateThree] = useState(0);
   const [stateFour, setStateFour] = useState(0);
 
-  // setStateOne(2);
-  // console.log(stateOne);
-  
+
+
   const setAllStates = () => {
     setStateOne((prevState) => (prevState + 1));
-    console.log(stateOne);
 
     setStateOne((prevState) => (prevState + 1));
     console.log(stateOne);
@@ -28,12 +28,18 @@ export const SetState: React.FC = () => {
   }
 
   const handleClick = () => {
-    console.log(stateOne);
-    
+    // eslint-disable-next-line
+    clickCount++;
     setAllStates();
-    console.log(stateOne);
-    
+    console.log('stateOne', stateOne, 'clickNumber', clickCount);
+    console.log('stateTwo', stateTwo, 'clickNumber', clickCount);
+    console.log('stateThree', stateThree, 'clickNumber', clickCount);
+    console.log('stateFour', stateFour, 'clickNumber', clickCount);
+    alert('You have clicked');
   }
+
+  console.log('afterclick and setStates', 'stateOne', stateOne);
+  
 
   return (
     <>
