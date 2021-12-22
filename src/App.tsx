@@ -7,6 +7,8 @@ import { Forms } from './components/Forms';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
 import { SetState } from './components/SetState';
+import { Context } from './components/UseContext';
+import { UseContextSeperate } from './components/UseContextSeperate';
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -34,6 +36,8 @@ function App() {
       <WelcomeDialog />
       <Forms />
       <SetState />
+      <Context />
+      <UseContextSeperate />
     </div>
   );
 }
