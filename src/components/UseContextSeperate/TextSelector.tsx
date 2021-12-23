@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { TextContext } from "."
 
+// Using context to be the only source of changing text
 export const TextSelector: React.FC = () => {
   const {text, setText} = useContext(TextContext);
 
