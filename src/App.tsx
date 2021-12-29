@@ -3,6 +3,7 @@ import './App.css';
 import { Card } from './components/Card';
 import { WelcomeDialog } from './components/Children';
 import { Clock } from './components/CLock';
+import { ErrorBoundary, ErrorMessenger } from './components/ErrorBoundary';
 import { Forms } from './components/Forms';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
@@ -38,6 +39,9 @@ function App() {
       <SetState />
       <Context />
       <UseContextSeperate />
+      <ErrorBoundary>
+        <ErrorMessenger />
+      </ErrorBoundary>
     </div>
   );
 }
