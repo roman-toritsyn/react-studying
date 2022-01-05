@@ -7,6 +7,7 @@ import { ErrorBoundary, ErrorMessenger } from './components/ErrorBoundary';
 import { Forms } from './components/Forms';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
+import { Useref } from './components/RefForwarding';
 import { SetState } from './components/SetState';
 import { Context } from './components/UseContext';
 import { UseContextSeperate } from './components/UseContextSeperate';
@@ -42,6 +43,7 @@ function App() {
       <ErrorBoundary>
         <ErrorMessenger />
       </ErrorBoundary>
+      <Useref />
     </div>
   );
 }
