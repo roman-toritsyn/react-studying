@@ -5,6 +5,7 @@ import { WelcomeDialog } from './components/Children';
 import { Clock } from './components/CLock';
 import { ErrorBoundary, ErrorMessenger } from './components/ErrorBoundary';
 import { Forms } from './components/Forms';
+import { ButtonWithClick } from './components/HOC';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
 import { Useref } from './components/RefForwarding';
@@ -44,6 +45,7 @@ function App() {
         <ErrorMessenger />
       </ErrorBoundary>
       <Useref />
+      <ButtonWithClick />
     </div>
   );
 }
