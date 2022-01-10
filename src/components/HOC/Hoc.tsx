@@ -1,23 +1,29 @@
 import React, { useState } from "react"
 
-type Content = {
-  content: string
-}
+// type Counter = {
+//   count: number,
+//   clickHandler: () => void
+// }
 
 export const InfoComponent: React.FC = () => {
-  return <div>hi</div>
+  return (
+    <>
+    <h1>Hi</h1>
+    </>
+  )
 }
 
-export function WithExtraInfo<P>(
-  WrappedComponent: React.ComponentType<P & Content>
-) {
-  const [content, setContent] = useState('');
-  setContent('important data.');
+export function WithCounter(
+  WrappedComponent: any
+): any {
+  const [count, setCount] = useState(0)
 
-  const ComponentWithExtraInfo = (props: P) => {
-    return <WrappedComponent {...props} content={content} />;
+  const clickHandler = (() => setCount(prevCount => prevCount + 1))
+
+  const ComponentWithCounter = (props: any) => {
+    return <WrappedComponent {...props} onclick={clickHandler} count={count} />;
   };
-  return ComponentWithExtraInfo;
+  return ComponentWithCounter;
 }
 
-export const InfoComponentWithExtraInfo = WithExtraInfo(InfoComponent)
+export const InfoComponentWithCounter = WithCounter(InfoComponent);
