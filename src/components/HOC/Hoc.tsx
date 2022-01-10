@@ -1,21 +1,21 @@
 import React, { useState } from "react"
 
-type ExtraInfo = {
-  extraInfo: string
+type Content = {
+  content: string
 }
 
-export const InfoComponent = () => {
-  return <div></div>
+export const InfoComponent: React.FC = () => {
+  return <div>hi</div>
 }
 
 export function WithExtraInfo<P>(
-  WrappedComponent: React.ComponentType<P & ExtraInfo>
+  WrappedComponent: React.ComponentType<P & Content>
 ) {
-  const [extraInfo, setExtraInfo] = useState('');
-  setExtraInfo('important data.');
+  const [content, setContent] = useState('');
+  setContent('important data.');
 
   const ComponentWithExtraInfo = (props: P) => {
-    return <WrappedComponent {...props} extraInfo={extraInfo} />;
+    return <WrappedComponent {...props} content={content} />;
   };
   return ComponentWithExtraInfo;
 }

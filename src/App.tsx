@@ -45,7 +45,7 @@ function App() {
         <ErrorMessenger />
       </ErrorBoundary>
       <Useref />
-      <InfoComponentWithExtraInfo />
+      {/* <InfoComponentWithExtraInfo /> */}
     </div>
   );
 }
