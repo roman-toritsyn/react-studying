@@ -16,14 +16,14 @@ export const Useref: React.FC = () => {
 
 
   return (
-    <>
+    <React.Fragment>
       <div>UseRef rendered {renderCount.current} times</div>
 
       <input ref={inputRef} value={name} onChange={e => setName(e.target.value)} />
 
       <div>My name is {name}</div>
 
-      <button onClick={focusInput}>Focus input</button>
-    </>
+      <button onClick={focusInput} style={{marginBottom: '30px'}}>Focus input</button>
+      </React.Fragment>
   )
 }

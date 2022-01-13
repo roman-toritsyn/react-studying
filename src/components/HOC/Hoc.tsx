@@ -1,9 +1,4 @@
-import React, { useState } from "react"
-
-// type Counter = {
-//   count: number,
-//   clickHandler: () => void
-// }
+import { useState } from "react";
 
 export const InfoComponent: React.FC = () => {
   return (

@@ -6,6 +6,7 @@ import { Clock } from './components/CLock';
 import { ErrorBoundary, ErrorMessenger } from './components/ErrorBoundary';
 import { Forms } from './components/Forms';
 import { InfoComponentWithCounter } from './components/HOC';
+import { JSXinDepth } from './components/JSXinDepth/JSXinDepth';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
 import { Useref } from './components/RefForwarding';
@@ -46,6 +47,7 @@ function App() {
       </ErrorBoundary>
       <Useref />
       {/* <InfoComponentWithCounter /> */}
+      <JSXinDepth />
     </div>
   );
 }
