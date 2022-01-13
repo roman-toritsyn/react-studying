@@ -9,6 +9,7 @@ import { InfoComponentWithCounter } from './components/HOC';
 import { JSXinDepth } from './components/JSXinDepth/JSXinDepth';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
+import { ModalContainer } from './components/Portals/Portal';
 import { Useref } from './components/RefForwarding';
 import { SetState } from './components/SetState';
 import { Context } from './components/UseContext';
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         {online ? 'Online' : 'Offline'}
       </header>
       <button
@@ -45,9 +46,10 @@ function App() {
       <ErrorBoundary>
         <ErrorMessenger />
       </ErrorBoundary>
-      <Useref />
+      <Useref /> */}
       {/* <InfoComponentWithCounter /> */}
-      <JSXinDepth />
+      {/* <JSXinDepth /> */}
+      <ModalContainer />
     </div>
   );
 }
