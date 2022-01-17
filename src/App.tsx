@@ -15,7 +15,8 @@ import { SetState } from './components/SetState';
 import { Context } from './components/UseContext';
 import { UseContextSeperate } from './components/UseContextSeperate';
 import { UseMemo } from './components/UseMemo';
-import { ForReactMemo } from './components/ReactMemo'
+import { ForReactMemo } from './components/ReactMemo';
+import { DebounceWithUseCallback } from './components/DebounceWithUseCallback'
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -52,8 +53,9 @@ function App() {
       {/* <InfoComponentWithCounter /> */}
       {/* <JSXinDepth /> */}
       {/* <ModalContainer /> */}
-      <UseMemo />
-      <ForReactMemo />
+      {/* <UseMemo />
+      <ForReactMemo /> */}
+      {/* <DebounceWithUseCallback /> */}
     </div>
   );
 }
