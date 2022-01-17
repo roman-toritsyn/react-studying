@@ -14,6 +14,8 @@ import { Useref } from './components/RefForwarding';
 import { SetState } from './components/SetState';
 import { Context } from './components/UseContext';
 import { UseContextSeperate } from './components/UseContextSeperate';
+import { UseMemo } from './components/UseMemo';
+import { ForReactMemo } from './components/ReactMemo'
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -49,7 +51,9 @@ function App() {
       <Useref /> */}
       {/* <InfoComponentWithCounter /> */}
       {/* <JSXinDepth /> */}
-      <ModalContainer />
+      {/* <ModalContainer /> */}
+      <UseMemo />
+      <ForReactMemo />
     </div>
   );
 }

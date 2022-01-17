@@ -10,7 +10,7 @@ const ModalContainerS = {
 const OtherContentS = {
   height: '100px',
   backgroundColor: 'red',
-  zIndex: 2
+  zIndex: 2,
 }
 
 export const ModalContainer = () => {
