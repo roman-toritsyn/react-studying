@@ -6,7 +6,6 @@ import { Clock } from './components/CLock';
 import { ErrorBoundary, ErrorMessenger } from './components/ErrorBoundary';
 import { Forms } from './components/Forms';
 import { InfoComponentWithCounter } from './components/HOC';
-import { JSXinDepth } from './components/JSXinDepth/JSXinDepth';
 import { List } from './components/List';
 import { OnlineStatusToggler } from './components/OnlineStatusToggler';
 import { ModalContainer } from './components/Portals/Portal';
@@ -17,6 +16,7 @@ import { UseContextSeperate } from './components/UseContextSeperate';
 import { UseMemo } from './components/UseMemo';
 import { ForReactMemo } from './components/ReactMemo';
 import { DebounceWithUseCallback } from './components/DebounceWithUseCallback'
+import { RenderProps } from './components/RenderProps';
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -51,11 +51,11 @@ function App() {
       </ErrorBoundary>
       <Useref /> */}
       {/* <InfoComponentWithCounter /> */}
-      {/* <JSXinDepth /> */}
       {/* <ModalContainer /> */}
       {/* <UseMemo />
       <ForReactMemo /> */}
       {/* <DebounceWithUseCallback /> */}
+      <RenderProps />
     </div>
   );
 }

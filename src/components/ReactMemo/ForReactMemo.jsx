@@ -18,8 +18,8 @@ export const ForReactMemo = () => {
     [query]
   )
 
-   const clickHandler = () => setCount(prevC => prevC + 1)
-   const changeHandler = (event) => setQuery(event.target.value)
+    const clickHandler = () => setCount(prevC => prevC + 1)
+    const changeHandler = (event) => setQuery(event.target.value)
 
   return (
     <>
