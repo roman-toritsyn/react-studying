@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import './App.css';
-import { Card } from './components/Card';
-import { WelcomeDialog } from './components/Children';
-import { Clock } from './components/CLock';
-import { ErrorBoundary, ErrorMessenger } from './components/ErrorBoundary';
-import { Forms } from './components/Forms';
-import { InfoComponentWithCounter } from './components/HOC';
-import { List } from './components/List';
-import { OnlineStatusToggler } from './components/OnlineStatusToggler';
-import { ModalContainer } from './components/Portals/Portal';
-import { Useref } from './components/RefForwarding';
-import { SetState } from './components/SetState';
-import { Context } from './components/UseContext';
-import { UseContextSeperate } from './components/UseContextSeperate';
-import { UseMemo } from './components/UseMemo';
-import { ForReactMemo } from './components/ReactMemo';
+import React, { useState } from 'react'
+import './App.css'
+import { Card } from './components/Card'
+import { WelcomeDialog } from './components/Children'
+import { Clock } from './components/CLock'
+import { ErrorBoundary, ErrorMessenger } from './components/ErrorBoundary'
+import { Forms } from './components/Forms'
+import { InfoComponentWithCounter } from './components/HOC'
+import { List } from './components/List'
+import { OnlineStatusToggler } from './components/OnlineStatusToggler'
+import { ModalContainer } from './components/Portals/Portal'
+import { Useref } from './components/RefForwarding'
+import { SetState } from './components/SetState'
+import { Context } from './components/UseContext'
+import { UseContextSeperate } from './components/UseContextSeperate'
+import { UseMemo } from './components/UseMemo'
+import { ForReactMemo } from './components/ReactMemo'
 import { DebounceWithUseCallback } from './components/DebounceWithUseCallback'
-import { RenderProps } from './components/RenderProps';
+import { RenderProps } from './components/RenderProps'
+import { UncontrolledInput } from './components/UncontrolledInput'
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -55,7 +56,8 @@ function App() {
       {/* <UseMemo />
       <ForReactMemo /> */}
       {/* <DebounceWithUseCallback /> */}
-      <RenderProps />
+      {/* <RenderProps /> */}
+      <UncontrolledInput />
     </div>
   );
 }
