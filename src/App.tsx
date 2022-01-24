@@ -18,6 +18,7 @@ import { ForReactMemo } from './components/ReactMemo'
 import { DebounceWithUseCallback } from './components/DebounceWithUseCallback'
 import { RenderProps } from './components/RenderProps'
 import { UncontrolledInput } from './components/UncontrolledInput'
+import { PropTypesComponent } from './components/PropTypes'
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -57,7 +58,8 @@ function App() {
       <ForReactMemo /> */}
       {/* <DebounceWithUseCallback /> */}
       {/* <RenderProps /> */}
-      <UncontrolledInput />
+      {/* <UncontrolledInput /> */}
+      <PropTypesComponent message={'Hello it\'s PropTypes xD'} />
     </div>
   );
 }
