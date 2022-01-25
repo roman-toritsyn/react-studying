@@ -19,6 +19,7 @@ import { DebounceWithUseCallback } from './components/DebounceWithUseCallback'
 import { RenderProps } from './components/RenderProps'
 import { UncontrolledInput } from './components/UncontrolledInput'
 import { PropTypesComponent } from './components/PropTypes'
+import { SyntheticEvents } from './components/SyntheticEvents'
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -59,7 +60,8 @@ function App() {
       {/* <DebounceWithUseCallback /> */}
       {/* <RenderProps /> */}
       {/* <UncontrolledInput /> */}
-      <PropTypesComponent message={'Hello it\'s PropTypes xD'} />
+      {/* <PropTypesComponent message={'Hello it\'s PropTypes xD'} /> */}
+      <SyntheticEvents />
     </div>
   );
 }
