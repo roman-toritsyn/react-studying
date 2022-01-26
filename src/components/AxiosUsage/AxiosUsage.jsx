@@ -1,19 +1,26 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
+const URL = 'http://hn.algolia.com/api/v1/search?query='
+
 export const AxiosUsage = () => {
   const [articles, setArticles] = useState([])
   const [input, setInput] = useState('')
   const [query, setQuery] = useState('')
+  const [isLoading, setIsloading] = useState(false)
 
-  useEffect(async () => {
-    if(query !== '') {
-      const result = await axios(`http://hn.algolia.com/api/v1/search?query=${query}`)
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsloading(true)
+
+      const result = await axios(`${URL}${query}`)
 
       setArticles(result.data.hits)
+      setIsloading(false)
     }
-  }, [query])
 
+    if(query !== '') fetchData()
+  }, [query])
 
   const listItems = articles.map(article =>
     <li key={article.objectId}>
@@ -39,10 +46,13 @@ export const AxiosUsage = () => {
         Search
       </button>
 
-
-      <ul>
-        {listItems}
-      </ul>
+      {isLoading ? (
+        <div>L o a d i n g   . . .</div>
+      ) : (
+        <ul>
+          {listItems}
+        </ul>
+      )}
     </>
   )
 }
