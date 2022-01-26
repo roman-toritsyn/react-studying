@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useMemo, useState, useRef, useCallback } from "react"
 import { useGetArticles } from './useGetArticles'
 
 const URL = 'http://hn.algolia.com/api/v1/search?query='
@@ -11,6 +11,7 @@ export const AxiosUsage = () => {
   
   const { articles, isLoading, isError } = useGetArticles(URL, query)
   
+
   // const [isLoading, setIsloading] = useState(false)
   // const [articles, setArticles] = useState([])
 

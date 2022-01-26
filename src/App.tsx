@@ -21,6 +21,7 @@ import { PropTypesComponent } from './components/PropTypes'
 import { SyntheticEvents } from './components/SyntheticEvents'
 import { SetState } from './components/Hooks/UseState'
 import { AxiosUsage } from './components/AxiosUsage'
+import { GetBoundingClientRect } from './components/GetBoundingClientRect'
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -65,6 +66,7 @@ function App() {
       {/* <SyntheticEvents /> */}
       {/* <SetState /> */}
       <AxiosUsage />
+      <GetBoundingClientRect />
     </div>
   );
 }
