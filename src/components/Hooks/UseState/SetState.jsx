@@ -2,7 +2,7 @@ import { useState } from "react"
 
 let clickCount = 0;
 
-export const SetState: React.FC = () => {
+export const SetState = () => {
   const [stateOne, setStateOne] = useState(0);
   const [stateTwo, setStateTwo] = useState(0);
   const [stateThree, setStateThree] = useState(0);

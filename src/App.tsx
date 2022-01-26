@@ -10,16 +10,17 @@ import { List } from './components/List'
 import { OnlineStatusToggler } from './components/OnlineStatusToggler'
 import { ModalContainer } from './components/Portals/Portal'
 import { Useref } from './components/RefForwarding'
-import { SetState } from './components/SetState'
-import { Context } from './components/UseContext'
-import { UseContextSeperate } from './components/UseContextSeperate'
-import { UseMemo } from './components/UseMemo'
+import { Context } from './components/Hooks/UseContext'
+import { UseContextSeperate } from './components/Hooks/UseContextSeperate'
+import { UseMemo } from './components/Hooks/UseMemo'
 import { ForReactMemo } from './components/ReactMemo'
 import { DebounceWithUseCallback } from './components/DebounceWithUseCallback'
 import { RenderProps } from './components/RenderProps'
 import { UncontrolledInput } from './components/UncontrolledInput'
 import { PropTypesComponent } from './components/PropTypes'
 import { SyntheticEvents } from './components/SyntheticEvents'
+import { SetState } from './components/Hooks/UseState'
+import { AxiosUsage } from './components/AxiosUsage'
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -61,7 +62,9 @@ function App() {
       {/* <RenderProps /> */}
       {/* <UncontrolledInput /> */}
       {/* <PropTypesComponent message={'Hello it\'s PropTypes xD'} /> */}
-      <SyntheticEvents />
+      {/* <SyntheticEvents /> */}
+      {/* <SetState /> */}
+      <AxiosUsage />
     </div>
   );
 }
