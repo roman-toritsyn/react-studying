@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './App.css'
 import { Card } from './components/Card'
 import { WelcomeDialog } from './components/Children'
@@ -22,6 +22,7 @@ import { SyntheticEvents } from './components/SyntheticEvents'
 import { SetState } from './components/Hooks/UseState'
 import { AxiosUsage } from './components/AxiosUsage'
 import { GetBoundingClientRect } from './components/GetBoundingClientRect'
+import { Counter } from './components/UseReducer'
 
 function App() {
   const [online, setOnline] = useState(true);
@@ -65,8 +66,9 @@ function App() {
       {/* <PropTypesComponent message={'Hello it\'s PropTypes xD'} /> */}
       {/* <SyntheticEvents /> */}
       {/* <SetState /> */}
-      <AxiosUsage />
-      <GetBoundingClientRect />
+      {/* <AxiosUsage /> */}
+      {/* <GetBoundingClientRect /> */}
+      <Counter />
     </div>
   );
 }
